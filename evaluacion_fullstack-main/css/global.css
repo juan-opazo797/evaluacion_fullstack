@@ -1,0 +1,113 @@
+
+:root {
+    /* Paleta de Colores Corporativa */
+    --color-primario: #2e7d32;
+    --color-primario-oscuro: #1b5e20;
+    --color-fondo: #f8f9fa;
+    --color-blanco: #ffffff;
+    --color-borde: #e0e0e0;
+    --color-borde-input: #cccccc;
+    --color-texto: #333333;
+    --color-texto-oscuro: #222222;
+    --color-texto-etiqueta: #444444;
+    --color-texto-secundario: #555555;
+    --color-texto-suave: #666666;
+
+    --fuente-principal: Arial, sans-serif;
+    --ancho-maximo: 1200px;
+    --transicion-suave: all 0.2s ease;
+    --sombra-tarjeta: 0 4px 10px rgba(0, 0, 0, 0.05);
+    --sombra-focus: 0 0 5px rgba(46, 125, 50, 0.3);
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.contenedor,
+.contenedor-principal,
+.contenedor-header,
+.contenedor-footer {
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.boton-verde,
+.btn-enviar {
+    width: 100%;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transicion-suave);
+}
+
+.boton-verde:hover,
+.btn-enviar:hover {
+    background-color: var(--color-primario-oscuro);
+}
+
+.etiqueta {
+    color: var(--color-primario);
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.linea-divisora {
+    border: 0;
+    border-top: 1px solid var(--color-borde);
+    margin: 15px 0;
+}
+
+
+body {
+    background-color: #F7F7F7; /* Blanco Suave */
+    color: #333333;             /* Texto Principal Gris Oscuro */
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #8B4513;             /* Marrón Claro */
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    color: #2E8B57;             /* Verde Esmeralda */
+}
+
+button, input[type="submit"], .btn-primary {
+    background-color: #2E8B57; /* Verde Esmeralda */
+    color: #FFFFFF;
+    border: none;
+}
+
+.oferta, .promo, .badge-oferta {
+    background-color: #FFD700; /* Amarillo Mostaza */
+    color: #333333;
+}
