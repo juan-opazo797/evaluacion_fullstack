@@ -1,202 +1,147 @@
 
-.breadcrumbs {
-    font-size: 0.85rem;
-    margin-bottom: 20px;
-    color: var(--color-texto-secundario);
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Huerto Hogar</title>
 
-.breadcrumbs a {
-    color: var(--color-primario);
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transicion-suave);
-}
+    
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
 
-.breadcrumbs a:hover {
-    text-decoration: underline;
-}
+   
+    <div class="top-bar-wrapper">
+        <div class="top-bar">
+            <a href="iniciar_sesion.html">Iniciar sesión</a> | 
+            <a href="registrar_usuario.html">Registrar usuario</a>
+        </div>
+    </div>
 
+    <header>
+        <div class="contenedor-header">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                    <h1>Huerto Hogar</h1>
+                </a>
+            </div>
 
-.contenedor-producto {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 50px;
-    align-items: start;
-}
+            <nav class="menu">
+                <a href="index.html">Home</a>
+                <a href="productos.html">Productos</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="contacto.html" class="activo">Contacto</a>
+            </nav>
 
+            <div class="carrito">
+                <a href="carrito.html">🛒 Carrito (0)</a>
+            </div>
+        </div>
+    </header>
 
-.imagen-principal {
-    width: 100%;
-    height: 450px;
-    border: 1px solid var(--color-borde);
-    border-radius: 8px;
-    margin-bottom: 15px;
-    background-color: var(--color-blanco);
-    object-fit: cover;
-}
+    <main class="contenedor pagina-contacto">
+        <div class="contacto-wrapper">
+            
+            <section class="contacto-info">
+                <span class="etiqueta">HABLEMOS</span>
+                <h2>Ponte en contacto</h2>
+                <p class="descripcion">
+                    ¿Tienes dudas sobre nuestros productos orgánicos o necesitas asistencia con tu pedido? Escríbenos o visítanos directamente en nuestra tienda.
+                </p>
 
-.miniaturas {
-    display: flex;
-    gap: 15px;
-}
+                <div class="datos-contacto">
+                    <div class="dato-item">
+                        <strong>📍 Dirección:</strong>
+                        <p>Av. Principal Huerto Hogar 1234, Santiago, Chile</p>
+                    </div>
+                    <div class="dato-item">
+                        <strong>📞 Teléfono:</strong>
+                        <p>+56 9 1234 5678</p>
+                    </div>
+                    <div class="dato-item">
+                        <strong>✉️ Correo electrónico:</strong>
+                        <p>contacto@huertohogar.cl</p>
+                    </div>
+                    <div class="dato-item">
+                        <strong>⏰ Horario de Atención:</strong>
+                        <p>Lunes a Viernes: 09:00 - 18:00 hrs<br>Sábados: 10:00 - 14:00 hrs</p>
+                    </div>
+                </div>
 
-.miniatura {
-    width: 80px;
-    height: 80px;
-    border: 1px solid var(--color-borde);
-    border-radius: 6px;
-    background-color: var(--color-blanco);
-    cursor: pointer;
-    object-fit: cover;
-    transition: var(--transicion-suave);
-}
+                <div class="imagen-contacto">
+                    <img src="imagenes/logo.jpg" alt="Huerto Hogar Tienda">
+                </div>
+            </section>
 
-.miniatura:hover {
-    border-color: var(--color-primario);
-}
+            <section class="contacto-formulario">
+                <form class="panel-form">
+                    <h3>Enviarnos un mensaje</h3>
 
-.miniatura.activa {
-    border: 3px solid var(--color-primario);
-}
+                    <div class="grupo-campo">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" placeholder="Ej: María González" required>
+                    </div>
 
+                    <div class="grupo-campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" placeholder="ejemplo@correo.com" required>
+                    </div>
 
-.imagen-x {
-    background-image: 
-        linear-gradient(to bottom right, transparent calc(50% - 1px), var(--color-borde), transparent calc(50% + 1px)),
-        linear-gradient(to top right, transparent calc(50% - 1px), var(--color-borde), transparent calc(50% + 1px));
-}
+                    <div class="grupo-campo">
+                        <label for="telefono">Teléfono (opcional)</label>
+                        <input type="tel" id="telefono" placeholder="+56 9 ...">
+                    </div>
 
+                    <div class="grupo-campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                    </div>
 
-.cabecera-producto {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
+                    <button type="submit" class="btn-enviar">Enviar mensaje</button>
+                </form>
+            </section>
 
-.cabecera-producto h1 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: var(--color-texto-oscuro);
-    margin: 0;
-}
+        </div>
+    </main>
 
-.precio-detalle {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--color-primario-oscuro);
-}
+    <footer class="pie-pagina-columnas">
+        <div class="contenedor-footer-grid">
+            <!-- Columna 1: Marca y descripción -->
+            <div class="columna-footer">
+                <h3>Huerto Hogar</h3>
+                <p>Productos frescos y naturales directo del campo a tu mesa.</p>
+            </div>
 
-.descripcion-producto {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: var(--color-texto);
-    margin-bottom: 30px;
-}
+            <div class="columna-footer">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
 
-.fila-cantidad {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
+            <div class="columna-footer">
+                <h4>Contacto</h4>
+                <p>📍 Santiago, Chile</p>
+                <p>📞 +56 9 1234 5678</p>
+                <p>✉️ contacto@huertohogar.cl</p>
+            </div>
+        </div>
 
-.input-cantidad {
-    width: 70px;
-    padding: 8px;
-    text-align: center;
-    border: 1px solid var(--color-borde-input);
-    border-radius: 6px;
-    font-size: 1rem;
-}
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Huerto Hogar. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
-/* Botón principal de compra */
-.btn-añadir-detalle {
-    width: 100%;
-    background-color: var(--color-primario);
-    color: var(--color-blanco);
-    padding: 14px;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: var(--transicion-suave);
-}
-
-.btn-añadir-detalle:hover {
-    background-color: var(--color-primario-oscuro);
-}
-
-
-.seccion-relacionados {
-    margin-top: 50px;
-    margin-bottom: 60px;
-}
-
-.seccion-relacionados h3 {
-    font-size: 1.2rem;
-    color: var(--color-texto-oscuro);
-    margin-bottom: 20px;
-}
-
-.grilla-relacionados {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-}
-
-.tarjeta-relacionado {
-    border: 1px solid var(--color-borde);
-    border-radius: 8px;
-    padding: 12px;
-    text-align: center;
-    background-color: var(--color-blanco);
-    transition: var(--transicion-suave);
-}
-
-.tarjeta-relacionado:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--sombra-tarjeta);
-}
-
-.tarjeta-relacionado img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 10px;
-}
-
-.titulo-relacionado {
-    display: block;
-    font-size: 0.95rem;
-    font-weight: bold;
-    color: var(--color-texto);
-    text-decoration: none;
-    margin-bottom: 6px;
-}
-
-.precio-relacionado {
-    font-size: 0.9rem;
-    color: var(--color-primario);
-    font-weight: bold;
-}
-
-
-@media (max-width: 768px) {
-    .contenedor-producto {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .imagen-principal {
-        height: 320px;
-    }
-
-    .grilla-relacionados {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
